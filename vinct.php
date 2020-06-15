@@ -19,11 +19,6 @@ if($pilihy == "y" || $pilihy == "sudah")
 echo "\e[96m▬▬▬▬▬pilih y atau sudah▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 	goto login;
 login:
-echo "\e[96m▬▬▬▬▬tuliskan angka 3 di bawah ini▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
-$pass =  ( '║ User Login : ' );
-echo "\033[30;40m";
-$user = trim(fgets(STDIN));
-echo "\033[0m";
 
 {
 		echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";	
