@@ -95,7 +95,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("yellow","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(10);
+        sleep(15);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -105,13 +105,13 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("red","🔐▶️ Message: ".$message);
 	      gocar:
-        echo "\n".color("nevy","🔒▶️ Claim ulnag");
+        echo "\n".color("nevy","🔒▶️ CLAIM ");
         echo "\n".color("yellow","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(20);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","🔓▶️ Message: ".$message);
@@ -142,15 +142,15 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
         $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
         echo "\n".color("purple","🎫▶️ Total voucher ".$total." : ");
-        echo "\n".color("nevy","                     1. ".$voucher1);
-        echo "\n".color("nevy","                     2. ".$voucher2);
-        echo "\n".color("nevy","                     3. ".$voucher3);
-        echo "\n".color("nevy","                     4. ".$voucher4);
-        echo "\n".color("nevy","                     5. ".$voucher5);
-        echo "\n".color("nevy","                     6. ".$voucher6);
-        echo "\n".color("nevy","                     7. ".$voucher7);
-        echo "\n".color("nevy","                     8. ".$voucher8);
-        echo "\n".color("nevy","                     9. ".$voucher9);
+        echo "\n".color("purple","                     1. ".$voucher1);
+        echo "\n".color("purple","                     2. ".$voucher2);
+        echo "\n".color("purple","                     3. ".$voucher3);
+        echo "\n".color("purple","                     4. ".$voucher4);
+        echo "\n".color("purple","                     5. ".$voucher5);
+        echo "\n".color("purple","                     6. ".$voucher6);
+        echo "\n".color("purple","                     7. ".$voucher7);
+        echo "\n".color("purple","                     8. ".$voucher8);
+        echo "\n".color("purple","                     9. ".$voucher9);
         echo "\n".color("nevy","                     10. ".$voucher10);
       	echo "\n".color("nevy","                     11. ".$voucher11);
         echo "\n".color("nevy","                     12. ".$voucher12);
