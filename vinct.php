@@ -90,14 +90,14 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("nevy","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
-        echo color("nevy","\n▬▬▬▬▬▬▬▬▬▬▬▬🛠AUTO REDEEM VOUCHER GOJEK🛠▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo color("nevy","\n▬▬▬▬▬▬▬▬▬▬▬▬🛠AUTO REDEEM 🛠▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("nevy","🔒▶️ GASSS");
         echo "\n".color("yellow","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
-        echo color("yellow",".");
+        echo color("purple",".");
         sleep(25);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+       $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","🔓▶️ Message: ".$message);
@@ -105,11 +105,11 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("red","🔐▶️ Message: ".$message);
 	      gocar:
-        echo "\n".color("nevy","🔒▶️ CLAIM ");
-        echo "\n".color("yellow","⏳▶️ Sabar");
+        echo "\n".color("nevy","🔒▶️ Claim A");
+        echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(25);
+        sleep(20);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -119,12 +119,29 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }else{
         echo "\n".color("red","🔐▶️ Message: ".$message);
         gofood:
-        echo "\n".color("nevy","🔒▶️ Claim 2");
-        echo "\n".color("yellow","⏳▶️ Sabar");
+        echo "\n".color("nevy","🔒▶️ Claim B");
+        echo "\n".color("purple","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(25);
+        sleep(20);
         }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        echo "\n".color("green","🔓▶️ Message: ".$message);
+        echo "\n".color("nevy","🔒▶️ Claim voc Dasar");
+        echo "\n".color("purple","⏳▶️ Sabar");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(15);
+        }
+        sleep(15);
+       $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        echo "\n".color("green","🔓▶️ Message: ".$message);
+        echo "\n".color("nevy","🔒▶️ Claim voc Dasar");
+        echo "\n".color("purple","⏳▶️ Sabar");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
       	sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
@@ -142,19 +159,19 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
         $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
         echo "\n".color("purple","🎫▶️ Total voucher ".$total." : ");
-        echo "\n".color("purple","                     1. ".$voucher1);
+        echo "\n".color("nevy","                     1. ".$voucher1);
         echo "\n".color("purple","                     2. ".$voucher2);
-        echo "\n".color("purple","                     3. ".$voucher3);
+        echo "\n".color("nevy","                     3. ".$voucher3);
         echo "\n".color("purple","                     4. ".$voucher4);
-        echo "\n".color("purple","                     5. ".$voucher5);
+        echo "\n".color("nevy","                     5. ".$voucher5);
         echo "\n".color("purple","                     6. ".$voucher6);
-        echo "\n".color("purple","                     7. ".$voucher7);
+        echo "\n".color("nevy","                     7. ".$voucher7);
         echo "\n".color("purple","                     8. ".$voucher8);
-        echo "\n".color("purple","                     9. ".$voucher9);
-        echo "\n".color("nevy","                     10. ".$voucher10);
-      	echo "\n".color("nevy","                     11. ".$voucher11);
+        echo "\n".color("nevy","                     9. ".$voucher9);
+        echo "\n".color("purple","                     10. ".$voucher10);
+      	echo "\n".color("purple","                     11. ".$voucher11);
         echo "\n".color("nevy","                     12. ".$voucher12);
-        echo "\n".color("nevy","                     13. ".$voucher13);
+        echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
